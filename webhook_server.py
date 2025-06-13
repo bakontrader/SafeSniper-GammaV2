@@ -2,7 +2,7 @@ from flask import Flask, request
 import requests
 import datetime
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 TELEGRAM_TOKEN = '7636617234:AAHGDhIEJP9T35w6UYJ2NfdVt5SIJVvs9gg'
 CHAT_ID = '1075729672'
