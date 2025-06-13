@@ -9,10 +9,6 @@ CHAT_ID = '1075729672'
 def send_telegram_message(message):
     url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
     try:
-        response = requests.post(url, json=payload)
-        response.raise_for_status()
-    except requests.exceptions.RequestException as e:
-        print(f'Ошибка при отправке Telegram-сообщения: {e}')
         requests.post(url, json=payload)
     except Exception as e:
         print(f'Telegram error: {e}')
