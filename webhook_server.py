@@ -2,7 +2,7 @@ from flask import Flask, request
 import requests
 import datetime
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 TELEGRAM_TOKEN = '7636617234:AAHGDhIEJP9T35w6UYJ2NfdVt5SIJVvs9gg'
 CHAT_ID = '1075729672'
@@ -37,5 +37,5 @@ def webhook():
     send_telegram_message(message)
     return {'status': 'ok'}
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
